@@ -1,0 +1,271 @@
+{
+  "rfm": {
+    "customers": 1175,
+    "recency_median": 19.0,
+    "recency_min": 0.0,
+    "recency_max": 180.0,
+    "frequency_mean": 9.45531914893617,
+    "frequency_max": 33.0,
+    "monetary_mean": 2552.0585531914894,
+    "monetary_max": 14766.550000000001
+  },
+  "kmeans": {
+    "2": {
+      "inertia": 1820.7605530118512,
+      "silhouette": 0.464971805147615
+    },
+    "3": {
+      "inertia": 1268.2345870687618,
+      "silhouette": 0.4451611905197954
+    },
+    "4": {
+      "inertia": 743.0711078443475,
+      "silhouette": 0.5255443348818724
+    },
+    "5": {
+      "inertia": 617.3666358545001,
+      "silhouette": 0.48049500840771253
+    },
+    "6": {
+      "inertia": 503.1706222581654,
+      "silhouette": 0.4818721636138158
+    },
+    "7": {
+      "inertia": 408.460454419409,
+      "silhouette": 0.4163373417690264
+    },
+    "8": {
+      "inertia": 366.50348655316816,
+      "silhouette": 0.4123290612695322
+    }
+  },
+  "chosen_k": 4,
+  "segments": {
+    "0": {
+      "size": 436,
+      "mean_recency": 28.86,
+      "mean_frequency": 3.77,
+      "mean_monetary": 1057.62
+    },
+    "1": {
+      "size": 138,
+      "mean_recency": 24.12,
+      "mean_frequency": 6.77,
+      "mean_monetary": 7129.7
+    },
+    "2": {
+      "size": 419,
+      "mean_recency": 8.77,
+      "mean_frequency": 19.4,
+      "mean_monetary": 3410.02
+    },
+    "3": {
+      "size": 182,
+      "mean_recency": 109.04,
+      "mean_frequency": 2.2,
+      "mean_monetary": 685.99
+    }
+  },
+  "segment_names": {
+    "0": "Steady Essentials",
+    "1": "Premium Champions",
+    "2": "Frequent Basket Builders",
+    "3": "At Risk Regulars"
+  },
+  "premium_segment_id": 1,
+  "pca_variance_ratio": [
+    0.6342787496047422,
+    0.21803761714547434
+  ],
+  "cohort": {
+    "n": 1156,
+    "lapsed": 443,
+    "lapsed_rate_pct": 38.32179930795848,
+    "train": 924,
+    "test": 232,
+    "baseline_accuracy": 0.6163793103448276,
+    "baseline_f1": 0
+  },
+  "frequency_scaler_training_mean": 8.114718614718615,
+  "full_cohort_frequency_mean": 8.028546712802768,
+  "logistic": {
+    "best_params": {
+      "model__C": 10
+    },
+    "best_cv_f1": 0.6564709088340102,
+    "test": {
+      "confusion_matrix": [
+        [
+          104,
+          39
+        ],
+        [
+          32,
+          57
+        ]
+      ],
+      "precision_lapsed": 0.59375,
+      "recall_lapsed": 0.6404494382022472,
+      "f1_lapsed": 0.6162162162162163,
+      "accuracy": 0.6939655172413793
+    }
+  },
+  "random_forest": {
+    "best_params": {
+      "model__max_depth": 8,
+      "model__min_samples_leaf": 10
+    },
+    "best_cv_f1": 0.6834873305434798,
+    "test": {
+      "confusion_matrix": [
+        [
+          113,
+          30
+        ],
+        [
+          32,
+          57
+        ]
+      ],
+      "precision_lapsed": 0.6551724137931034,
+      "recall_lapsed": 0.6404494382022472,
+      "f1_lapsed": 0.6477272727272727,
+      "accuracy": 0.7327586206896551
+    },
+    "top_features": [
+      [
+        "num__monetary",
+        0.28176571740734413
+      ],
+      [
+        "num__frequency",
+        0.2743628625271826
+      ],
+      [
+        "num__recency",
+        0.11789105594568315
+      ],
+      [
+        "num__avg_delivery",
+        0.059368262409519534
+      ],
+      [
+        "num__cancellation_rate",
+        0.05407212323442949
+      ]
+    ]
+  },
+  "balanced_logistic": {
+    "confusion_matrix": [
+      [
+        90,
+        53
+      ],
+      [
+        11,
+        78
+      ]
+    ],
+    "precision_lapsed": 0.5954198473282443,
+    "recall_lapsed": 0.8764044943820225,
+    "f1_lapsed": 0.7090909090909091,
+    "accuracy": 0.7241379310344828
+  },
+  "logistic_selected_coefficients": [
+    [
+      "num__frequency",
+      -1.5888504064010553
+    ],
+    [
+      "cat__favourite_category_Electronics",
+      -0.8101542542164633
+    ],
+    [
+      "cat__city_Delhi",
+      -0.352452070207924
+    ],
+    [
+      "cat__favourite_category_Grocery",
+      -0.3061661570284477
+    ],
+    [
+      "cat__city_Mumbai",
+      -0.25183162405956583
+    ],
+    [
+      "cat__favourite_category_Snacks",
+      -0.24368037568728126
+    ],
+    [
+      "cat__gender_male",
+      -0.2002178419990914
+    ],
+    [
+      "num__monetary",
+      0.19942643594369802
+    ],
+    [
+      "cat__city_Chennai",
+      -0.19507856954802644
+    ],
+    [
+      "cat__city_Hyderabad",
+      -0.1554868921176824
+    ]
+  ],
+  "reload_predictions_identical": true,
+  "retention_rows": 10,
+  "retention_true_lapsed": 1,
+  "retention_list": [
+    {
+      "customer_id": "C0133",
+      "lapse_probability": 0.48427557664224,
+      "actually_lapsed": 0
+    },
+    {
+      "customer_id": "C1112",
+      "lapse_probability": 0.4814448633688352,
+      "actually_lapsed": 0
+    },
+    {
+      "customer_id": "C0060",
+      "lapse_probability": 0.481249996326319,
+      "actually_lapsed": 0
+    },
+    {
+      "customer_id": "C0862",
+      "lapse_probability": 0.47961886997440617,
+      "actually_lapsed": 0
+    },
+    {
+      "customer_id": "C0553",
+      "lapse_probability": 0.47944901828314745,
+      "actually_lapsed": 0
+    },
+    {
+      "customer_id": "C1008",
+      "lapse_probability": 0.47592612604336865,
+      "actually_lapsed": 0
+    },
+    {
+      "customer_id": "C0802",
+      "lapse_probability": 0.47290309496385663,
+      "actually_lapsed": 0
+    },
+    {
+      "customer_id": "C0565",
+      "lapse_probability": 0.4665875634383723,
+      "actually_lapsed": 1
+    },
+    {
+      "customer_id": "C0267",
+      "lapse_probability": 0.45775155091044295,
+      "actually_lapsed": 0
+    },
+    {
+      "customer_id": "C0785",
+      "lapse_probability": 0.4564351848065214,
+      "actually_lapsed": 0
+    }
+  ]
+}

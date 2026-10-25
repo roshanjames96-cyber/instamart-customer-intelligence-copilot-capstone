@@ -1,0 +1,159 @@
+{
+  "zero_shot": {
+    "prompt": "zero",
+    "tickets": 164,
+    "classified": 147,
+    "status_counts": {
+      "classified_json": 135,
+      "classified_keyword": 12,
+      "flagged_invalid_output": 9,
+      "flagged_long": 4,
+      "skipped_empty": 4
+    },
+    "tokens": 8932,
+    "tokens_per_classified": 60.76190476190476,
+    "accuracy_classified": 0.8571428571428571,
+    "redactions": {
+      "email": 55,
+      "phone": 91,
+      "order_id": 132
+    },
+    "redactions_total": 278,
+    "leftover_pii": 0,
+    "retry_log": [
+      "T0002 retry=0 wait=0.05299s",
+      "T0116 retry=0 wait=0.04531s",
+      "T0153 retry=0 wait=0.04844s",
+      "T0039 retry=0 wait=0.04779s",
+      "T0152 retry=0 wait=0.05421s",
+      "T0043 retry=0 wait=0.05346s",
+      "T0111 retry=0 wait=0.05615s",
+      "T0155 retry=0 wait=0.04609s",
+      "T0100 retry=0 wait=0.05027s",
+      "T0068 retry=0 wait=0.04537s",
+      "T0135 retry=0 wait=0.04773s",
+      "T0009 retry=0 wait=0.05132s",
+      "T0067 retry=0 wait=0.04533s",
+      "T0106 retry=0 wait=0.04749s",
+      "T0097 retry=0 wait=0.05312s",
+      "T0003 retry=0 wait=0.05181s",
+      "T0019 retry=0 wait=0.04776s",
+      "T0086 retry=0 wait=0.05237s",
+      "T0065 retry=0 wait=0.05512s"
+    ]
+  },
+  "few_shot": {
+    "prompt": "few",
+    "tickets": 164,
+    "classified": 147,
+    "status_counts": {
+      "classified_json": 135,
+      "classified_keyword": 12,
+      "flagged_invalid_output": 9,
+      "flagged_long": 4,
+      "skipped_empty": 4
+    },
+    "tokens": 14392,
+    "tokens_per_classified": 97.9047619047619,
+    "accuracy_classified": 1.0,
+    "redactions": {
+      "email": 55,
+      "phone": 91,
+      "order_id": 132
+    },
+    "redactions_total": 278,
+    "leftover_pii": 0,
+    "retry_log": [
+      "T0002 retry=0 wait=0.05299s",
+      "T0116 retry=0 wait=0.04531s",
+      "T0153 retry=0 wait=0.04844s",
+      "T0039 retry=0 wait=0.04779s",
+      "T0152 retry=0 wait=0.05421s",
+      "T0043 retry=0 wait=0.05346s",
+      "T0111 retry=0 wait=0.05615s",
+      "T0155 retry=0 wait=0.04609s",
+      "T0100 retry=0 wait=0.05027s",
+      "T0068 retry=0 wait=0.04537s",
+      "T0135 retry=0 wait=0.04773s",
+      "T0009 retry=0 wait=0.05132s",
+      "T0067 retry=0 wait=0.04533s",
+      "T0106 retry=0 wait=0.04749s",
+      "T0097 retry=0 wait=0.05312s",
+      "T0003 retry=0 wait=0.05181s",
+      "T0019 retry=0 wait=0.04776s",
+      "T0086 retry=0 wait=0.05237s",
+      "T0065 retry=0 wait=0.05512s"
+    ]
+  },
+  "budget_demo": {
+    "prompt": "zero",
+    "tickets": 164,
+    "classified": 99,
+    "status_counts": {
+      "classified_json": 91,
+      "budget_exhausted": 51,
+      "classified_keyword": 8,
+      "flagged_invalid_output": 6,
+      "skipped_empty": 4,
+      "flagged_long": 4
+    },
+    "tokens": 6023,
+    "tokens_per_classified": 60.83838383838384,
+    "accuracy_classified": 0.8484848484848485,
+    "redactions": {
+      "email": 55,
+      "phone": 91,
+      "order_id": 132
+    },
+    "redactions_total": 278,
+    "leftover_pii": 0,
+    "retry_log": [
+      "T0002 retry=0 wait=0.05299s",
+      "T0116 retry=0 wait=0.04531s",
+      "T0153 retry=0 wait=0.04844s",
+      "T0039 retry=0 wait=0.04779s",
+      "T0152 retry=0 wait=0.05421s",
+      "T0043 retry=0 wait=0.05346s",
+      "T0111 retry=0 wait=0.05615s",
+      "T0155 retry=0 wait=0.04609s",
+      "T0100 retry=0 wait=0.05027s",
+      "T0068 retry=0 wait=0.04537s",
+      "T0135 retry=0 wait=0.04773s",
+      "T0009 retry=0 wait=0.05132s",
+      "T0067 retry=0 wait=0.04533s"
+    ]
+  },
+  "zero_shot_confusion": {
+    "billing": {
+      "billing": 38,
+      "delivery": 0,
+      "fraud": 11,
+      "technical": 10
+    },
+    "delivery": {
+      "billing": 0,
+      "delivery": 36,
+      "fraud": 0,
+      "technical": 0
+    },
+    "fraud": {
+      "billing": 0,
+      "delivery": 0,
+      "fraud": 23,
+      "technical": 0
+    },
+    "technical": {
+      "billing": 0,
+      "delivery": 0,
+      "fraud": 0,
+      "technical": 29
+    }
+  },
+  "routing_counts": {
+    "support_queue": 102,
+    "security_team": 34,
+    "human_review": 17,
+    "premium_desk": 11
+  },
+  "final_rows": 164
+}
