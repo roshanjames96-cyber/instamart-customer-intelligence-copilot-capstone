@@ -127,8 +127,8 @@
     "billing": {
       "billing": 38,
       "delivery": 0,
-      "fraud": 11,
-      "technical": 10
+      "fraud": 0,
+      "technical": 0
     },
     "delivery": {
       "billing": 0,
@@ -137,13 +137,13 @@
       "technical": 0
     },
     "fraud": {
-      "billing": 0,
+      "billing": 11,
       "delivery": 0,
       "fraud": 23,
       "technical": 0
     },
     "technical": {
-      "billing": 0,
+      "billing": 10,
       "delivery": 0,
       "fraud": 0,
       "technical": 29

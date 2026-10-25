@@ -137,10 +137,10 @@ Few-shot uses 5,460 additional tokens, about 37.14 more per classified ticket, a
 
 | True \ Predicted | billing | delivery | fraud | technical |
 |---|---:|---:|---:|---:|
-| billing | 38 | 0 | 11 | 10 |
+| billing | 38 | 0 | 0 | 0 |
 | delivery | 0 | 36 | 0 | 0 |
-| fraud | 23 | 0 | 0 | 0 |
-| technical | 0 | 0 | 0 | 29 |
+| fraud | 11 | 0 | 23 | 0 |
+| technical | 10 | 0 | 0 | 29 |
 
 With the zero-shot budget demonstration, TOKEN_BUDGET=6,000, 51 eligible ticket calls were stopped as `budget_exhausted`; 6,023 tokens were recorded because the rule checks the running total before each next call. The final few-shot pipeline uses budget 100,000 and produces all 164 rows. Routing sends empty, long, invalid and budget-stopped tickets to NORMAL human review; validated fraud to HIGH security; other premium customers to HIGH premium desk; and other valid tickets to NORMAL support. Routes produced: 17 human review, 34 security team, 11 premium desk, 102 support queue. Outputs are rule-validated categories for eligible JSON/keyword responses; flagged and unprocessed tickets go to a human.
 

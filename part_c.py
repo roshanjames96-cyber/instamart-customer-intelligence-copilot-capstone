@@ -80,7 +80,7 @@ def run():
     confusion=pd.crosstab(classified.true_category,classified.category).reindex(index=sorted(ALLOWED),columns=sorted(ALLOWED),fill_value=0)
     retry_lines=fr['retry_log']
     (OUT/'triage_retry.log').write_text('\n'.join(retry_lines)+'\n',encoding='utf-8')
-    report={'zero_shot':zr,'few_shot':fr,'budget_demo':bm,'zero_shot_confusion':confusion.to_dict(),
+    report={'zero_shot':zr,'few_shot':fr,'budget_demo':bm,'zero_shot_confusion':confusion.to_dict(orient='index'),
       'routing_counts':joined.route.value_counts().to_dict(),'final_rows':len(joined)}
     (OUT/'part_c_report.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
     print('Part C complete')
